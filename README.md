@@ -42,6 +42,25 @@ set "SPEAKERS=Sound BlasterX Katana"
 set "HEADPHONES=SteelSeries Arctis 1 Wireless"
 ```
 
+## ⚡ Usage (And Enabling One-Click or Hotkey)
+
+To make this script truly instant, set up a Desktop shortcut or a global hotkey:
+
+1.  **Create the Shortcut:**
+    * Right-click the `.bat` file.
+    * Select **Send to** > **Desktop (create shortcut)**.
+
+2.  **Assign a Hotkey (Optional):**
+    * Right-click your new Desktop shortcut and select **Properties**.
+    * Click in the **Shortcut key** field.
+    * Press your desired key combination (e.g., `Ctrl` + `Alt` + `A`).
+    * Click **Apply**. Now you can toggle audio from anywhere in Windows!
+
+3.  **Customize the Icon (Optional):**
+    * In the **Properties** window, click **Change Icon...**.
+    * *Note: Windows might say the file contains no icons. Click OK to ignore.*
+    * Select a speaker or headphone icon from the default list to make it look professional.
+
 
 ## 📝 How It Works
 
@@ -55,7 +74,7 @@ If the file does not exist, the script switches audio to Speakers -> creates the
 ## 🔍 Troubleshooting
 
 **Audio Not Switching?**
-If for some reason the script does not appear to be working, you may have the wrong device name. Try opening a terminal in the same directory as svcl.exe and running `svcl.exe /scomma ""`. You will see a whole bunch of device names, and should be able to find the correct names of your devices listed in there.
+EIf for some reason the script does not appear to be working, you may have the wrong device name. Try opening a terminal in the same directory as svcl.exe and running `svcl.exe /scomma ""`. You will see a whole bunch of device names, and should be able to find the correct names of your devices listed in there.
 
 
 ## 📄 License
