@@ -24,6 +24,15 @@ set "STATE_FILE=%TEMP%\audio_toggle_flag.txt"
 :: ------------
 :: -- SCRIPT --
 
+:: Check if the app is actually running
+tasklist /FI "IMAGENAME eq %APP_NAME%" 2>NUL | find /I /N "%APP_NAME%">NUL
+if "%ERRORLEVEL%"=="1" (
+	echo [ERROR] %APP_NAME% is not running!
+	echo The script can not change the audio output device of a program or app that is not currently running. 
+	echo Please open the program or app and run the script again.
+	goto :End
+)
+
 :: Check if flag file exists to determine current state of audio output
 if exist "%STATE_FILE%" (
 	goto :SwitchToHeadphones
