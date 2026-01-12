@@ -31,7 +31,7 @@ Open the `.bat` file in any text editor (Notepad, VS Code) and update the config
 set "TOOL_PATH=C:\svcl\svcl.exe"
 
 :: -- Filename of the app you want to switch the audio on. --
-set "APP_NAME=opera.exe"
+set "APP_NAME=firefox.exe"
 
 
 :: -- Exact names of your audio devices --
