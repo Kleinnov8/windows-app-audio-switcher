@@ -1,16 +1,30 @@
 @echo off
 setlocal
 
-::vars
-set "TOOL_PATH=C:\svcl\svcl.exe"
-set "APP_NAME=opera.exe"
+:: -- CONFIGURATION (DON'T SKIP THIS OR IT WILL NOT WORK) --
 
+:: -- Path to your svcl executable file (svcl.exe) --
+set "TOOL_PATH=C:\svcl\svcl.exe"
+
+:: -- Filename of the app you want to switch the audio on (such as Chrome, Firefox, or perhaps a video game) --
+set "APP_NAME=firefox.exe"
+
+
+:: -- Exact names of your audio devices --
+:: Find these by right clicking the speaker icon in your task tray and clicking "Open volume mixer".
+:: You will see a list of devices such as "(Speakers) SteelSeries Arctis 1 Wireless".
+:: Your device name is this but with the part in parentheses omitted. (e.g. "SteelSeries Arctis 1 Wireless")
 set "SPEAKERS=Sound BlasterX Katana"
 set "HEADPHONES=SteelSeries Arctis 1 Wireless"
 
+
+:: -- Temporary file needed for the script to work (DON'T CHANGE THIS PART) -- 
 set "STATE_FILE=%TEMP%\audio_toggle_flag.txt"
 
-::check if flag file exists to determine current state of audio output
+:: ------------
+:: -- SCRIPT --
+
+:: Check if flag file exists to determine current state of audio output
 if exist "%STATE_FILE%" (
 	goto :SwitchToHeadphones
 ) else (
