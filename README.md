@@ -58,5 +58,5 @@ If the file does not exist, the script switches audio to Speakers -> creates the
 If for some reason the script does not appear to be working, you may have the wrong device name. Try opening a terminal in the same directory as svcl.exe and running `svcl.exe /scomma ""`. You will see a whole bunch of device names, and should be able to find the correct names of your devices listed in there.
 
 
-📄 License
+## 📄 License
 This project is open-source. Feel free to modify and use it as needed. Sound Volume Command Line is property of NirSoft.
